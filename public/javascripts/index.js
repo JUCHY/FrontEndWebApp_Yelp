@@ -205,7 +205,7 @@ function main() {
         event.appendChild(eventime);
         const eventcost = document.createElement('div');
         eventcost.setAttribute('class', "cost");
-        eventcost.textContent = "Cost: " +evt.cost;
+        eventcost.textContent = "Cost: $" +evt.cost;
         event.appendChild(eventcost);
         const eventdist = document.createElement('div');
         eventdist.setAttribute('class','distance');
