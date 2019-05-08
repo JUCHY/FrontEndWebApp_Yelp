@@ -81,7 +81,7 @@ function main() {
         // Response handlers.
         xhr.onload = function(e){
             if (xhr.status >= 200 && xhr.status < 400) {
-                results = JSON.parse(xhr.responseText);
+                let results = JSON.parse(xhr.responseText);
                 var pre = document.getElementById('content');
                 results= results.events;
                // console.log(results);
@@ -166,7 +166,7 @@ function main() {
                 long:  position.coords.longitude
                     }
                 
-                var url = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins="+pos.lat+","+pos.long+"&destinations="+evt.latitude+","+evt.longitude+"&key=AIzaSyAe7UVEFWEKBrEPpDKCQzsa-XTwmVRRO4Y";
+                var url = "https://thingproxy.freeboard.io/fetch/https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins="+pos.lat+","+pos.long+"&destinations="+evt.latitude+","+evt.longitude+"&key=AIzaSyAe7UVEFWEKBrEPpDKCQzsa-XTwmVRRO4Y";
                 var req = createCORSRequest('GET',url);
                 if (!req) {
                     alert('CORS not supported');
@@ -174,7 +174,9 @@ function main() {
                   }
             req.onload =  function(e){
                     if (req.status >= 200 && req.status < 400) {
-                        dist.textContent = "Distance: " + req.rows[0].elements[0].distance.text + "Time: " + req.rows[0].elements[0].duration.text;
+                        results = JSON.parse(req.responseText);
+                        results = results.rows[0].elements[0];
+                        dist.textContent = "Distance: " + results.distance.text + " Time: " + results.duration.text;
                     }
                 
             };
