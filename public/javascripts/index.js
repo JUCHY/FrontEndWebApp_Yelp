@@ -38,6 +38,8 @@ function main() {
         req.send(null);
     }*/
 
+//had trouble with cors
+//code taken from https://www.html5rocks.com/en/tutorials/cors/
     function createCORSRequest(method, url) {
         var xhr = new XMLHttpRequest();
         if ("withCredentials" in xhr) {
