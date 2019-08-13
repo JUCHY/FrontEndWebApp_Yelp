@@ -53,6 +53,7 @@ function main() {
           // CORS not supported.
           xhr = null;
         }
+        xhr.setRequestHeader('Authorization', 'Bearer '+ APICode);   
         return xhr;
       }
       
