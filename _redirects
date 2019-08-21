@@ -1,2 +1,0 @@
-/api/*  https://thingproxy.freeboard.io/fetch/http://api.yelp.com/v3/:splat  200
-/blog /post
