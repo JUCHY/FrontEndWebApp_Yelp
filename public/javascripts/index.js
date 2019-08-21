@@ -72,7 +72,7 @@ function main() {
        // console.log(timestamp);
        // console.log(endtimestamp);
 
-        var url = 'https://thingproxy.freeboard.io/fetch/http://api.yelp.com/v3/events?location=EastVillage,NewYork,NY&limit=20&end_date='+endtimestamp+'&sort_on=time_start&start_date='+timestamp;
+        var url = '/api/events?location=EastVillage,NewYork,NY&limit=20&end_date='+endtimestamp+'&sort_on=time_start&start_date='+timestamp;
         
       
         var xhr = createCORSRequest('GET', url);
