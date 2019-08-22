@@ -1,8 +1,8 @@
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
 [[redirects]]
-  from = "/api"
-  to = "https://thingproxy.freeboard.io/fetch/http://api.yelp.com/v3"
+  from = "/api/*"
+  to = "https://thingproxy.freeboard.io/fetch/http://api.yelp.com/v3/:splat"
   status = 200
   headers = {Bearer = "ggOvurhzx5e-m7GXrtUOKKqMcV7DOqWvCLcH7mbgYtanfLYjKCOGPHQwCHTD77c5Qr0lCXcEHl1TLPiX6iVeVJXeepI7z4emwHw7Ju8U6ni9kkDeTNci-GTUT7LIXHYx"}
 
