@@ -1,11 +1,6 @@
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
   from = "/api"
   to = "https://thingproxy.freeboard.io/fetch/http://api.yelp.com/v3"
   status = 200
@@ -23,3 +18,9 @@
   for = "https://thingproxy.freeboard.io/*"
     [headers.values]
       Bearer = "ggOvurhzx5e-m7GXrtUOKKqMcV7DOqWvCLcH7mbgYtanfLYjKCOGPHQwCHTD77c5Qr0lCXcEHl1TLPiX6iVeVJXeepI7z4emwHw7Ju8U6ni9kkDeTNci-GTUT7LIXHYx"
+
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
