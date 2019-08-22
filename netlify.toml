@@ -4,7 +4,7 @@
   from = "/api/*"
   to = "https://thingproxy.freeboard.io/fetch/http://api.yelp.com/v3/:splat"
   status = 200
-  headers = {Authorization = "Bearer ggOvurhzx5e-m7GXrtUOKKqMcV7DOqWvCLcH7mbgYtanfLYjKCOGPHQwCHTD77c5Qr0lCXcEHl1TLPiX6iVeVJXeepI7z4emwHw7Ju8U6ni9kkDeTNci-GTUT7LIXHYx"}
+  headers = { Access-Control-Allow-Origin = "*", Authorization = "Bearer ggOvurhzx5e-m7GXrtUOKKqMcV7DOqWvCLcH7mbgYtanfLYjKCOGPHQwCHTD77c5Qr0lCXcEHl1TLPiX6iVeVJXeepI7z4emwHw7Ju8U6ni9kkDeTNci-GTUT7LIXHYx"}
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
